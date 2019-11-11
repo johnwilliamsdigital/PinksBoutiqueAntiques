@@ -1,0 +1,520 @@
+/* css reset code */
+
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center,
+			dl, dt, dd, ol, ul, li,
+			fieldset, form, label, legend,
+			table, caption, tbody, tfoot, thead, tr, th, td,
+			article, aside, canvas, details, embed, 
+			figure, figcaption, footer, header, hgroup, 
+			menu, nav, output, ruby, section, summary,
+			time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, 
+			footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			body {
+				line-height: 1;
+			}
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after,
+			q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+
+
+
+/*----------ANIMATIONS---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+		/* ANIMATION */
+				@keyframes fadein {
+					from {
+						opacity: 0;
+						}
+					to {opacity: 1;}
+					
+					}
+
+
+
+				@keyframes fadein2 {
+					from {
+						opacity: 0;
+						}
+					to {opacity: 0.9;}
+					
+					}
+
+
+
+/*----------BODY---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* body */
+
+	body {
+ 		background-color: black;
+		font-family: 'Connie-Regular';
+		
+		/*    overflow-x:hidden;*/
+		}
+		
+	
+/*
+		header {
+			text-align: center;
+		}
+*/
+
+			h1 {
+				text-align: center;
+				font-size: 100px;
+				font-family: 'Dancing Script', cursive;		
+				/*		margin-top: 1%;*/
+				filter: invert(30%);
+				}
+				
+			h1 a{
+				text-decoration: none;
+				color: black;
+				
+				}
+				
+
+			h1:hover{
+			transition: 0.4s;
+			-webkit-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);
+			filter: invert(0%);		
+			}
+
+
+				h2 {
+					text-align: center;
+					font-family: 'Dancing Script', cursive;	
+					font-size: 50px;
+					margin-top: 3%;
+					}
+
+
+		nav {
+
+		}
+
+
+/*
+		span {
+			outline: none;
+			text-decoration: none;
+			}
+*/
+
+
+#shoppingcart {
+
+position: fixed;
+top: 15px;
+right: 15px;
+filter: invert(25%);
+}
+
+#cartimage:hover{
+			transition: 0.4s;
+			-webkit-transform: scale(1.05);
+			-ms-transform: scale(1.05);
+			transform: scale(1.05);
+			filter: invert(0%);
+			
+    -webkit-filter: drop-shadow(2px 2px 2px black); /* webkit only 
+                     assuming the content is written in black */
+    filter: drop-shadow(2px 2px 2px black);              /* FF~35 */
+    filter: drop-shadow(2px 2px 0 2px black);              /* MDN */	
+}
+
+
+
+
+/*----------GRID CONTENT---------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+	main /*wrapper*/
+		{
+	margin-left: 5%;
+	margin-right: 5%;
+	}
+
+
+
+
+
+
+		#content {
+			-moz-column-count: 3;
+			-webkit-column-count: 3;
+			column-count:3;
+			display:block;
+			margin-top:50px;
+			font-family: 'Montserrat', sans-serif;
+			}
+
+
+
+
+
+
+		.col img{
+			width: 100%;
+			max-width: 400px;
+			display:block;
+			margin-left: auto;
+    		margin-right: auto;
+			}
+			
+			
+			
+
+		.galtitle {
+			display: block;
+			text-align: center !important;
+			margin: 0 10%;
+			margin-top: 8px;
+			font-size: 18px;
+			font-family: 'Montserrat', sans-serif;
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------GRID TEMPLATE------------------------------------------------------------------------------------*/
+
+
+
+	/*  GRID TEMPLATE  */
+			.section {
+				clear: both;
+				padding: 0px;
+				margin: 0px;
+			}
+
+			/*  COLUMN SETUP  */
+			.col {
+				display: block;
+				float:left;
+				margin: 1% 0 1% 4%;
+				opacity: 0.87;
+				font-family: 'Montserrat', sans-serif;
+				}
+			
+			
+		.col:hover {
+		opacity: 1;
+			transition: 0.4s;
+			-webkit-transform: scale(1.03);
+			-ms-transform: scale(1.03);
+			transform: scale(1.03);
+		}
+
+
+			
+			.col:first-child { margin-left: 0; }
+
+			/*  GROUPING  */
+			.group:before,
+			.group:after { content:""; display:table; }
+			.group:after { clear:both;}
+			.group { zoom:1; /* For IE 6/7 */ }
+
+
+			/*  GRID OF THREE  */
+			.span_3_of_3 { width: 100%; }
+			.span_2_of_3 { width: 65.33%; }
+			.span_1_of_3 { width: 30.66%; }
+
+
+
+
+
+
+			/*  GO FULL WIDTH BELOW 700 PIXELS */
+			@media only screen and (max-width: 700px) 
+			
+					{
+					
+						.col {
+							margin: 1% 0 1% 0%; 
+							}
+							
+							
+						.span_3_of_3, .span_2_of_3, .span_1_of_3 { 
+							width: 100%; 
+							}
+							
+						h1 {
+						font-size: 70px;
+						margin-top: 10px;
+						}
+						
+						h2 {
+						font-size: 35px;
+						margin-top: 35px;
+						}
+						
+						
+						.galtitle {
+							font-size: 14px;
+						}
+						
+						
+						
+						
+					} /*end media query*/
+
+
+
+
+
+
+
+
+
+
+/*---------------------navigation------------------------------------------------------------------------------------*/
+
+
+
+
+/* Navigation Menu - Background */
+.navigation {
+  /* critical sizing and position styles */
+  width: 100%;
+/*  height: 100%;*/
+  position: fixed;
+  top: 0;
+  right: 0;
+/*  bottom: 0;*/
+  left: 0;
+  z-index: 0;
+  
+  /* non-critical appearance styles */
+  list-style: none;
+  background: #111;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navigation Menu - List items */
+.nav-item {
+  /* non-critical appearance styles */
+  width: 200px;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #000;
+}
+
+.nav-item a {
+  /* non-critical appearance styles */
+  display: block;
+  padding: 1em;
+  color: white;
+  font-size: 1.2em;
+  text-decoration: none;
+font-weight: bold;
+}
+
+.nav-item a:hover {
+  color: #000000;
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,0.78) 47%, rgba(237,237,237,0.54) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(47%, rgba(246,246,246,0.78)), color-stop(100%, rgba(237,237,237,0.54)));
+background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,0.78) 47%, rgba(237,237,237,0.54) 100%);
+background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,0.78) 47%, rgba(237,237,237,0.54) 100%);
+background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(246,246,246,0.78) 47%, rgba(237,237,237,0.54) 100%);
+background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(246,246,246,0.78) 47%, rgba(237,237,237,0.54) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+/*animation-duration: 2s;*/
+transition-duration: 1s;
+			transition: 0.4s;
+			-webkit-transform: scale(1.03);
+			-ms-transform: scale(1.03);
+			transform: scale(1.03);
+}
+
+/* Site Wrapper - Everything that isn't navigation */
+.site-wrap {
+  /* Critical position and size styles */
+  min-height: 100%;
+  min-width: 100%;
+/*  background-image: linear-gradient(rgba(255,220,255,1), rgba(222,156,168,1)); more contrast and purple version*/
+  background-image: linear-gradient(rgba(255,193,203,1), rgba(222,156,168,1));
+background-color: pink; 
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  
+  /* non-critical apperance styles */
+  padding: 4em;
+/*  background-image: linear-gradient(135deg, rgb(254,255,255) 0%,rgb(221,241,249) 35%,rgb(160,216,239) 100%);*/
+  background-size: 200%;
+}
+
+/* Nav Trigger */
+.nav-trigger {
+  /* critical styles - hide the checkbox input */
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+label[for="nav-trigger"] {
+  /* critical positioning styles */
+  position: fixed;
+  left: 15px; top: 15px;
+  z-index: 2;
+  
+  /* non-critical apperance styles */
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+  opacity : 0.6;
+  background-size: contain;
+}
+
+
+
+
+
+
+label:hover{
+  opacity : 1;
+  			
+/*
+			-webkit-transform: scale(1.03);
+			-ms-transform: scale(1.03);
+			transform: scale(1.03);
+*/
+  transition: 1s;
+  height: 31px;
+  width: 31px;
+
+}
+
+
+/* Make the Magic Happen */
+.nav-trigger + label, .site-wrap {
+  transition: left 0.2s;
+}
+
+.nav-trigger:checked + label {
+  left: 215px;
+}
+
+.nav-trigger:checked ~ .site-wrap {
+  left: 200px;
+  box-shadow: 0 0 5px 5px rgba(0,0,0,0.5);
+}
+
+body {
+    /* Without this, the body has excess horizontal scroll when the menu is open */
+  overflow-x: hidden;
+}
+
+/* Additional non-critical styles */
+
+/*
+h1, h3, p {
+  max-width: 600px;
+  margin: 0 auto 1em;
+}
+*/
+
+code {
+    padding: 2px;
+    background: #ddd;
+}
+
+/* Micro reset */
+*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body { height: 100%; width: 100%;}
+
+
+
+
+
+
+
+/*---------FOOTER----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* footer */
+
+footer {
+text-align: right;
+float: right;
+bottom: 0;
+margin-top: 2%;
+margin-right: -3%;
+font-family: Montserrat;
+}
+		
+		
+footer a:visited{
+color: purple;
+}
+
+footer a{
+color:#5F00FF;
+}
+
+footer a:hover{
+color: hotpink;
+font-weight: bold;
+}
+			
+		
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+			
+			
+.nooutline{
+	outline: none;
+}
+			
+			
+			
+			
+
